@@ -41,6 +41,16 @@ Setup de um **Projeto no Claude** para ter aulas de conversação em inglês **p
 - Se a sessão cair ou você chegar no destino no meio da conversa, sem problema: na próxima, diga *"I'm back"* no mesmo chat.
 - `Summary` e o registro no log ficam para quando estiver parado.
 
+## Pausas para pensar
+
+Quem decide que você terminou de falar é o **app** (ele detecta o silêncio), não o Claude. Por isso não dá para configurar "espere 3 segundos" nas instruções. O que foi feito:
+
+| Lado | Ajuste |
+|---|---|
+| **Claude** | Se a sua fala chegar cortada (termina no meio da frase, em "and", "because", "the", "um", ou tem só 1–3 palavras), ele **não responde**: só diz *"Mm-hm... go on"* e espera você continuar |
+| **Você** | Use **fillers** para segurar a vez enquanto pensa: *"Let me think..."*, *"Well..."*, *"How can I put it..."*, *"What's the word..."*. Isso mantém o microfone ativo **e** é exatamente o que um nativo faz |
+| **Emergência** | Diga *"Wait"* ou *"Hold on"*: ele responde só *"Sure, take your time"* |
+
 ## Comandos de voz
 
 | Você diz | Efeito |
@@ -54,6 +64,7 @@ Setup de um **Projeto no Claude** para ter aulas de conversação em inglês **p
 | *"Let's debate ..."* | O Claude defende o lado oposto e você argumenta |
 | *"Como fala ...?"* | Recebe a palavra em inglês e a conversa **continua em inglês** |
 | *"Portuguese, please"* / *"Back to English"* | Troca de idioma e volta |
+| *"Wait"* / *"Hold on"* / *"Let me think..."* | Ele espera você continuar |
 | *"Let's wrap up"* / *"I have to go"* | Encerra a sessão com 2 dicas faladas |
 | `Summary` (digitado, fim do dia) | Gera o resumo do dia para o log |
 
