@@ -1,7 +1,8 @@
 # Lesson Log
 
 > Arquivo para subir em **Project knowledge**. É a "memória" das aulas.
-> Depois de cada aula: peça `Summary`, cole a linha `Index` na tabela de índice, cole o bloco da aula em "Class summaries" (mais recente primeiro), atualize o "Current status" e **substitua o arquivo no projeto**.
+> **1 aula = 1 dia = 1 chat** (com 1 a 4 sessões de voz no mesmo chat).
+> No fim do dia: digite `Summary` no chat do dia, cole a linha `Index` na tabela de índice, cole o bloco da aula em "Class summaries" (mais recente primeiro), atualize o "Current status" e **substitua o arquivo no projeto**.
 
 ## Current status
 - Next class: 1
@@ -34,9 +35,9 @@ Erros que apareceram em mais de uma aula. O professor vai trazer esses pontos de
 | | | |
 
 ## Class index
-| # | Date | Topic | Status |
-|---|---|---|---|
-| | | | |
+| # | Date | Topic | Sessions | Status |
+|---|---|---|---|---|
+| | | | | |
 
 ---
 
