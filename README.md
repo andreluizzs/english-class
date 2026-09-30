@@ -1,77 +1,79 @@
-# English Class — prática diária de conversação com Claude
+# English Class — aulas de conversação por voz com Claude
 
-Setup de um **Projeto no Claude** para praticar conversação todos os dias, calibrado para o meu nível real (B2 no certificado, B1+ na fala).
+Setup de um **Projeto no Claude** para ter aulas de conversação em inglês **por áudio ao vivo**, todos os dias, com um índice de aulas e resumo de cada sessão para revisar e avançar nos temas.
 
 ## Arquivos
 
 | Arquivo | Onde usar | Para quê |
 |---|---|---|
-| [`01-project-instructions.md`](01-project-instructions.md) | Project → **Instructions** | O "prompt" do professor: regras, correções, modos, feedback |
+| [`01-project-instructions.md`](01-project-instructions.md) | Project → **Instructions** | O "roteiro" do professor: como conversar, corrigir, conduzir e fechar a aula |
 | [`02-learner-profile.md`](02-learner-profile.md) | Project → **Knowledge** | Meu nível, objetivos, contexto de trabalho, erros típicos |
-| [`03-progress-log.md`](03-progress-log.md) | Project → **Knowledge** | Memória entre sessões: erros recorrentes e foco da semana |
+| [`03-lesson-log.md`](03-lesson-log.md) | Project → **Knowledge** | Memória das aulas: status atual, roadmap de temas, erros recorrentes, índice e resumos |
 
 ## Setup (10 min)
 
-1. No Claude: **Projects → Create project** → nome: `English Coach`.
+1. No Claude: **Projects → Create project** → nome: `English Class`.
 2. Em **Instructions**, cole o conteúdo de `01-project-instructions.md` (a partir da linha `# Role`).
-3. Em **Knowledge**, suba `02-learner-profile.md` e `03-progress-log.md`.
-4. Abra um chat no projeto e digite: `level check`.
-5. Cole o bloco de log do resultado em `03-progress-log.md` e reenvie o arquivo.
+3. Em **Knowledge**, suba `02-learner-profile.md` e `03-lesson-log.md`.
+4. No app do celular, abra um novo chat **dentro do projeto**, ative o **modo voz** e diga: *"Let's start today's class"*.
+5. **Teste da 1ª aula:** confira se, no modo voz, o Claude segue as instruções (responde curto, só em inglês, se apresenta como professor). Se não seguir, use o **ditado do teclado** no chat normal: você fala, o texto vai para o Claude, e o resto funciona igual.
 
-## Rotina diária (20–25 min)
+## Como é uma aula (15–25 min)
 
-| Etapa | Tempo | Como |
+| Etapa | O que você faz | O que o Claude faz |
 |---|---|---|
-| 1. Abrir | 1 min | Novo chat no projeto → `start` (ou a palavra do modo) |
-| 2. Falar | 15 min | **Voz ou ditado do teclado** — não digite (ver abaixo) |
-| 3. Feedback | 3 min | `end` → ler os 5 erros e as 5 expressões **em voz alta** |
-| 4. Registrar | 1 min | Copiar o bloco de log para o `03-progress-log.md` |
+| 1. Início | *"Let's start today's class"* | Lê o log, diz o nº da aula, aquece com o seu dia |
+| 2. Conversa | Fala sobre o tema (ou propõe outro) | Respostas curtas, 1 pergunta por vez, corrige pouco |
+| 3. Fechamento | *"Let's wrap up"* | Fala 3 dicas: 1 acerto, 1 erro para praticar, 1 expressão |
+| 4. Resumo | Sai do modo voz e digita `Summary` | Gera o bloco da aula (temas + principais erros) |
+| 5. Registro (1 min) | Cola o resumo no `03-lesson-log.md` e substitui o arquivo no projeto | Na próxima aula, retoma de onde parou |
 
-**Semana:** Seg `work` · Ter `smalltalk` · Qua `call` · Qui `debate` · Sex `retell` + revisão · Fim de semana `daily` (opcional).
+> O Claude **não consegue salvar o arquivo sozinho** no projeto. O passo 5 é manual, mas é só copiar e colar. Sem ele, cada aula começa do zero.
 
-**Sexta (revisão semanal, +5 min):** atualizar "Current focus" e "Recurring mistakes" no log e reenviar o arquivo no projeto.
+## Comandos de voz
 
-## Palavras-chave durante o chat
-
-| Digite | Efeito |
+| Você diz | Efeito |
 |---|---|
-| `work` / `call` / `debate` / `smalltalk` / `daily` / `retell` | Muda o modo da sessão |
-| `grammar present perfect` | Mini-treino de uma estrutura (5 exercícios) + uso na conversa |
-| `voice` | Para de corrigir a cada turno; junta tudo no final |
-| `help` | Recebe 2–3 começos de frase (não a resposta pronta) |
-| `PT?` | Explicação em português |
-| `end` | Feedback final + bloco de log |
-| `level check` | Teste de nivelamento (refazer 1x por mês) |
+| *"Let's start today's class"* | Começa a aula (a 1ª é de apresentações) |
+| *"Let's talk about ..."* | Muda para um tema que você escolher |
+| *"Let's move on"* / *"Next topic"* | Avança para o próximo tema do roadmap |
+| *"Let's review"* | Revisão dos temas anteriores e dos erros recorrentes |
+| *"Let's do a call"* | Simula uma call/reunião de trabalho |
+| *"Let's debate ..."* | O Claude defende o lado oposto e você argumenta |
+| *"Como fala ...?"* | Recebe a palavra em inglês e a conversa **continua em inglês** |
+| *"Portuguese, please"* / *"Back to English"* | Troca de idioma e volta |
+| *"Let's wrap up"* | Encerra com 3 dicas faladas |
+| `Summary` (digitado) | Gera o resumo da aula para o log |
 
-## Análise crítica do prompt original
+## Regras de correção
 
-O prompt de exemplo é um bom ponto de partida, mas tem lacunas que fazem a prática render menos:
+| Situação | Comportamento |
+|---|---|
+| Erro comum | **Reformulação:** o Claude repete sua ideia do jeito certo na resposta, sem apontar o erro |
+| Erro que atrapalha o sentido, que se repete ou que já está nos "Recurring mistakes" | Dica de 1 frase + *"Can you try again?"* |
+| Nova tentativa | **Máximo 3 tentativas.** Se ainda errar, ele segue a conversa e anota no resumo |
+| Frequência | 1 correção explícita por vez, e não a cada fala |
+| Pronúncia / sotaque | Não é avaliada (o áudio vira texto antes de chegar ao Claude) |
 
-| Ponto | Problema | Ajuste feito |
-|---|---|---|
-| **Só texto** | Digitar não é conversar. Você tem tempo de pensar, consultar, reescrever — o oposto de uma reunião. | Prioridade para **voz / ditado**. Texto fica para `grammar` e revisão. |
-| **Corrigir todo erro** | Sobrecarga: 6 correções por resposta = você não retém nenhuma e perde o ritmo. | **Máx. 3 por turno**, priorizando erros que mudam o sentido e erros recorrentes. |
-| **Corrigir no modo voz** | Interromper a cada fala quebra a fluência — que é justamente o seu ponto fraco. | No modo voz, correções só no final (`end`). |
-| **Idiom sempre** | Idioms são pouco usados em reunião de trabalho; decorar "raining cats and dogs" não ajuda. | Foco em **collocations e phrasal verbs** ("follow up", "roll out", "sort out"). |
-| **Nível genérico** ("intermediário") | O Claude não sabe *onde* você trava. | Perfil com os pontos fracos do laudo do curso + erros típicos de brasileiro. |
-| **Sem memória** | Cada chat começa do zero; os mesmos erros voltam sem ninguém perceber. | `03-progress-log.md` + marcação `🔁 Again!` para erro repetido. |
-| **IA fala demais** | Chatbot tende a responder com parágrafos; quem precisa falar é você. | Resposta curta (~60 palavras) e **obriga a expandir** respostas curtas. |
-| **Tema aleatório** | Pouca transferência para o seu dia a dia real. | Modos `work`, `call` e `debate` com cenários de produto, integração bancária e negociação. |
+## Evolução dos temas
 
-## Sobre o seu nível (certificado vs. percepção)
+- O **roadmap** fica no `03-lesson-log.md`: Introductions → Daily routine → Free time → Series & movies → Food & travel → Sports → Personal finance → Work → Meetings & calls → Debate → Free topics.
+- Um tema pode durar várias aulas. O Claude **só avança quando você pedir**; se perceber que você está confortável, ele sugere, mas pergunta antes.
+- Você pode editar o roadmap à vontade: reordenar, incluir ou remover temas.
+- Quando quiser consolidar, peça *"Let's review"*: ele usa os resumos e os erros recorrentes do log.
 
-Sua percepção faz sentido, e o próprio laudo do curso confirma:
+## Sobre o meu nível (certificado vs. percepção)
 
-- Notas de 88–89% em comunicação, interação e segurança → você **compreende e se vira bem** (B2 receptivo).
-- Mas o texto também diz: *"tende à simplificação"*, *"comete erros em estruturas mais avançadas"*, *"busca por palavras"*, *"dificuldade em debate ou confronto de ideias"*, *"hesita no uso informal"*.
-- E um ponto importante: *"alto conhecimento gramatical"*. Ou seja, **você sabe a regra, mas ela ainda não sai automática na fala.**
+O laudo do curso confirma a percepção de estar um nível abaixo na fala:
 
-**Conclusão:** o problema não é falta de conteúdo, é **automatização**. Por isso o setup força volume de fala, repetição dos mesmos erros até sumirem, e cenários parecidos com a vida real. Estudar mais gramática em texto não resolve esse gap.
+- Notas de 88–89% em comunicação, interação e segurança → **compreende e se vira bem** (B2 para ouvir e ler).
+- Mas também: *"tende à simplificação"*, *"comete erros em estruturas mais avançadas"*, *"busca por palavras"*, *"dificuldade em debate"*, *"hesita no uso informal"*.
+- E: *"alto conhecimento gramatical"* → **sabe a regra, mas ela ainda não sai automática na fala.**
 
-## Dicas práticas
+Por isso o foco é **volume de conversa por voz**, com correção leve e retomada dos erros recorrentes, em vez de mais gramática.
 
-- **Ditado do teclado** (microfone do teclado do celular) é o melhor dos dois mundos: você **fala**, mas o Claude recebe texto e consegue corrigir. Use quando quiser correção turno a turno.
-- **Modo voz do app** (se disponível dentro do projeto): use no `call` e no `smalltalk`, para treinar ritmo e compreensão.
-- **Não troque para o português** quando travar: use `help` ou parafraseie ("I don't know the word, but it's the thing that...") — é exatamente essa habilidade que o `call` treina.
-- **Refaça o `level check` todo mês** e compare as notas no log.
+## Dicas
+
 - **Consistência > duração:** 20 min todo dia rendem mais que 2h no sábado.
+- **Quando travar, não mude para o português:** tente explicar com outras palavras (*"I don't know the word, but it's the thing that..."*) ou pergunte *"Como fala...?"*.
+- A cada ~10 aulas, peça no chat de texto: *"Based on my lesson log, how is my progress?"*.

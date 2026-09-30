@@ -28,6 +28,7 @@
 
 ## Personal interests (for small talk)
 - Football — Corinthians fan.
+- Series and movies.
 - Personal finance and organization.
 - Continuous learning, technology, AI.
 
