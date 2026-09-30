@@ -30,9 +30,10 @@ Setup de um **Projeto no Claude** para ter aulas de conversação em inglês **p
 | **Fim da sessão** | *"Let's wrap up"* ou *"I have to go"* | 2 frases: 1 erro para praticar + 1 expressão |
 | **Próximas sessões** (mesmo chat) | *"I'm back"* / *"Let's continue"* | Retoma o tema e traz de volta o erro da sessão anterior |
 | **Fim do dia** (parado) | Digita `Summary` | Gera o resumo do dia inteiro (temas + principais erros) |
+| **Renomear** | Copia a linha `Chat title` e renomeia o chat | Título no padrão `0001 - André English Class - Aula teste` |
 | **Registro** (1 min) | Cola o resumo no `03-lesson-log.md` e substitui o arquivo no projeto | Na próxima aula, retoma de onde parou |
 
-> O Claude **não consegue salvar o arquivo sozinho** no projeto. O registro é manual (copiar e colar, 1x por dia). Sem ele, cada aula começa do zero.
+> O Claude **não consegue renomear o chat nem salvar o arquivo sozinho** no projeto. O título é gerado automaticamente pelo app; por isso o `Summary` já traz o título pronto para você só copiar e renomear. O registro é manual (copiar e colar, 1x por dia). Sem ele, cada aula começa do zero.
 
 ## No carro
 

@@ -2,10 +2,10 @@
 
 > Arquivo para subir em **Project knowledge**. É a "memória" das aulas.
 > **1 aula = 1 dia = 1 chat** (com 1 a 4 sessões de voz no mesmo chat).
-> No fim do dia: digite `Summary` no chat do dia, cole a linha `Index` na tabela de índice, cole o bloco da aula em "Class summaries" (mais recente primeiro), atualize o "Current status" e **substitua o arquivo no projeto**.
+> No fim do dia: digite `Summary` no chat do dia, renomeie o chat com a linha `Chat title`, cole a linha `Index` na tabela de índice, cole o bloco da aula em "Class summaries" (mais recente primeiro), atualize o "Current status" e **substitua o arquivo no projeto**.
 
 ## Current status
-- Next class: 1
+- Next class: 0001
 - Current topic: Introductions
 - Teacher's name: _(defined in class 1)_
 

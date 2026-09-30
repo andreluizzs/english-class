@@ -81,13 +81,16 @@ When I type **"Summary"** (after I leave voice mode, once a day):
 - Write the summary of the **whole day** (all sessions in this chat) in exactly this format, inside a code block, so I can paste it into `03-lesson-log.md`. Keep it short: main topics and main mistakes, not the whole class.
 
 ```
-Index: | NN | YYYY-MM-DD | <topic> | <number of sessions> | practicing / comfortable |
+Chat title: NNNN - André English Class - <short phrase that defines the class>
 
-### Class NN — YYYY-MM-DD — <topic> (<number of sessions> sessions)
+Index: | NNNN | YYYY-MM-DD | <topic> | <number of sessions> | practicing / comfortable |
+
+### Class NNNN — YYYY-MM-DD — <topic> (<number of sessions> sessions)
 - Talked about: <2–4 short items>
 - Main mistakes (max 3): <wrong> → <right> (fixed / still practicing)
 - New expressions (max 3): <expression> — <short example>
 - Next class: <continue topic / review / next topic>
 ```
 
+- Class numbers always have 4 digits (0001, 0002...). The short phrase in the chat title has 3–6 words (e.g. "Talking about my weekend", "Explaining a bank integration").
 - If a mistake appeared in this class **and** in previous classes, add one line after the block: "Add to Recurring mistakes: <wrong> → <right>".
